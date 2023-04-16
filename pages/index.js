@@ -22,14 +22,14 @@ export const getStaticProps = async () => {
 					... on Page {
 						id
 						title
-						blocksJSON
+						blocks
 					}
 				}
 			}
 		`
 	}) 
 
-  const blocks = cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
+  const blocks = cleanAndTransformBlocks(data.nodeByUri.blocks);
 	return {
 		props: {
 			blocks,
